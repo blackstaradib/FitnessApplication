@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.adib.test.FragmentExercise.FragmentExerciseFirst"
+    android:background="@drawable/gradient"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <LinearLayout
+        android:id="@+id/linearlayoutcalender"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/calender"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/button_calender_next_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="اليوم التالي"
+            android:textSize="10dp"
+            android:background="@drawable/calender_buttons_right"/>
+        <LinearLayout
+            android:id="@+id/button_calender_select_day"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="15dp"
+                android:text="اليوم"
+                android:textAlignment="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:drawableTop="@drawable/ic_calender_black_24dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_calender_previos_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="اليوم السابق"
+            android:textSize="10dp"
+            android:background="@drawable/calender_buttons_left"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linearlayoutcalender">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewListviewTypeExercise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:textDirection="rtl"
+            android:layout_marginBottom="107dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:padding="10dp">
+        </android.support.v7.widget.RecyclerView>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

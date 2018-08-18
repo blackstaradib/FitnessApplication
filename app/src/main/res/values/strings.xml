@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_accont">المستخدم</string>
+    <string name="title_exercise">التمارين</string>
+    <string name="title_food">الأطعمة</string>
+    <string name="title_activity_main_with_menu">MainActivityWithMenu</string>
+
+    <string name="title_target">تحديد الهدف</string>
+    <string name="title_level">تحديد المستوى</string>
+    <string name="title_inf">معلومات عن التطبيق</string>
+    <string name="title_about">حول التطبيق</string>
+    <string name="title_activity_delete">delete</string>
+</resources>

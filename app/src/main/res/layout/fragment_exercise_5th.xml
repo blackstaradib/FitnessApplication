@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adib.test.FragmentExercise.FragmentExerciseFirst"
+    android:background="@drawable/gradient"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+
+    <Button
+        android:id="@+id/button_exercise_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/gradient_buttons"
+        android:ems="10"
+        android:layoutDirection="rtl"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="البدء"
+        android:textColor="#fff"
+        android:textDirection="rtl" />
+</android.support.constraint.ConstraintLayout>

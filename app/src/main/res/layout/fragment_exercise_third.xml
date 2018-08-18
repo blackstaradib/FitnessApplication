@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.adib.test.FragmentExercise.FragmentExerciseFirst"
+    android:background="@drawable/gradient"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <TextView
+        android:id="@+id/textViewTitleSteady"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="هل انت مستعد ؟"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="430dp"/>
+
+    <Button
+        android:id="@+id/button_exercise_steady_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/gradient_buttons"
+        android:ems="10"
+        android:layoutDirection="rtl"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="البدء"
+        android:textColor="#fff"
+        android:textDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleSteady"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

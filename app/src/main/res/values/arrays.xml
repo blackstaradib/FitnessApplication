@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="titles">
+        <item>التسجيل لأول مرة</item>
+        <item>تسجيل الدخول</item>
+    </string-array>
+
+    <array name="indicator_colors">
+        <item>@color/indicator_1</item>
+        <item>@color/indicator_2</item>
+        <item>@color/indicator_3</item>
+        <item>@color/indicator_4</item>
+    </array>
+
+    <array name="toppings">
+        <item>AAA</item>
+        <item>BBB</item>
+        <item>CCC</item>
+    </array>
+
+</resources>
+
+

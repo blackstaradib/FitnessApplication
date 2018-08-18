@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ادخل الوزن الحالي"
+            android:textSize="40px"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="125dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="70dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPickerCurrent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="160dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="80dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="210dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="60dp">
+
+
+
+            <Button
+                android:id="@+id/buttonBackCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="رجوع"
+                android:background="@drawable/gradient_buttons"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:id="@+id/buttonNextCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="التالي"
+                android:background="@drawable/gradient_buttons"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
