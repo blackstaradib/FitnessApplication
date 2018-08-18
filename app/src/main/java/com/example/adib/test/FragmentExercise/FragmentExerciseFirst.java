@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 
@@ -39,6 +40,8 @@ public class FragmentExerciseFirst extends Fragment {
 
     LinearLayout button =null;
 
+    Dialog dialog;
+
 
     @Nullable
     @Override
@@ -47,8 +50,6 @@ public class FragmentExerciseFirst extends Fragment {
         Bundle bundle=getArguments();
         index=bundle.getInt("index");
         view=inflater.inflate(R.layout.fragment_exercise_first,container,false);
-
-        final AppCompatActivity activity= (AppCompatActivity) view.getContext();
 
         typeExerciseList=new LinkedList<>();
         typeExerciseList.add(new TypeExercise(55,"تمارين الجسم بالكامل"));
@@ -74,15 +75,22 @@ public class FragmentExerciseFirst extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Dialog dialog = new Dialog(view.getContext());
+                dialog = new Dialog(view.getContext());
                 dialog.setContentView(R.layout.dialog_calender);
                 RecyclerView recyclerViewDialogCalender =dialog.findViewById(R.id.recyclerViewCalender);
                 GridLayoutManager gridLayoutManager=new GridLayoutManager(getActivity(),6);
                 recyclerViewDialogCalender.setLayoutManager(gridLayoutManager);
-                AdapterRecyclerViewCalender adapterRecyclerViewCalender =new AdapterRecyclerViewCalender(view.getContext());
+                AdapterRecyclerViewCalender adapterRecyclerViewCalender =new AdapterRecyclerViewCalender(view,dialog);
                 recyclerViewDialogCalender.setAdapter(adapterRecyclerViewCalender);
                 recyclerViewDialogCalender.setItemAnimator(new DefaultItemAnimator());
                 dialog.show();
+                Button button = dialog.findViewById(R.id.button_calender_cancel_day);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.hide();
+                    }
+                });
 
             }
         });
@@ -90,23 +98,6 @@ public class FragmentExerciseFirst extends Fragment {
         return view;
 
     }
-
-
-//    @Override
-//    public void onDetach() {
-//        super.onDetach();
-//
-//        try {
-//            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
-//            childFragmentManager.setAccessible(true);
-//            childFragmentManager.set(this, null);
-//
-//        } catch (NoSuchFieldException e) {
-//            throw new RuntimeException(e);
-//        } catch (IllegalAccessException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
 
 }

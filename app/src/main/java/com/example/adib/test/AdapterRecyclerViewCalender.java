@@ -1,12 +1,11 @@
 package com.example.adib.test;
 
-import android.content.Context;
+import android.app.Dialog;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -17,12 +16,18 @@ import android.widget.TextView;
 public class AdapterRecyclerViewCalender extends RecyclerView.Adapter<AdapterRecyclerViewCalender.ViewHolder> {
 
 
-    private Context context=null;
+    private View view1=null;
 
+    private int pos;
 
-    public AdapterRecyclerViewCalender(Context context) {
+    private TextView textView1;
 
-        this.context=context;
+    private Dialog dialog;
+
+    public AdapterRecyclerViewCalender(View view,Dialog dialog) {
+
+        this.view1=view;
+        this.dialog=dialog;
 
     }
 
@@ -43,12 +48,7 @@ public class AdapterRecyclerViewCalender extends RecyclerView.Adapter<AdapterRec
     public void onBindViewHolder(@NonNull AdapterRecyclerViewCalender.ViewHolder viewHolder, int position) {
 
 
-        viewHolder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        viewHolder.textView.setText(Integer.toString(position+1));
 
     }
 
@@ -66,7 +66,19 @@ public class AdapterRecyclerViewCalender extends RecyclerView.Adapter<AdapterRec
         public ViewHolder(View itemLayoutView) {
 
             super(itemLayoutView);
+
+            textView1 =view1.findViewById(R.id.textview_calender_select_day);
+
             textView=itemLayoutView.findViewById(R.id.textViewItemDay);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    pos=getAdapterPosition();
+                    textView1.setText("اليوم "+Integer.toString(pos+1));
+                    dialog.hide();
+                }
+            });
+
         }
 
     }
