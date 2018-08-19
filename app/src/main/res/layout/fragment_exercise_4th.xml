@@ -37,18 +37,4 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp" />
 
-    <ImageView
-        android:id="@+id/imageViewAnimation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:src="@drawable/animation_images"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_exercise_current" />
 </android.support.constraint.ConstraintLayout>

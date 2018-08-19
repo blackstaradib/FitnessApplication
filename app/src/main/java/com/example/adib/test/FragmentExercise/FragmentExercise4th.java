@@ -39,8 +39,6 @@ public class FragmentExercise4th extends Fragment implements YouTubePlayer.OnIni
 
     YouTubePlayerFragment youTubePlayerFragment;
 
-    AnimationDrawable animationDrawable;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -69,15 +67,6 @@ public class FragmentExercise4th extends Fragment implements YouTubePlayer.OnIni
 
         youTubePlayerFragment= (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.youTubeFragment);
         youTubePlayerFragment.initialize("AIzaSyBMz9atrH6nHsakXfARLKPsKvAkKE5iA3w",this);
-
-        ImageView imageView = view.findViewById(R.id.imageViewAnimation);
-        animationDrawable = (AnimationDrawable)imageView.getDrawable();
-        imageView.post(new Runnable() {
-            @Override
-            public void run() {
-                animationDrawable.start();
-            }
-        });
 
         return view;
 
