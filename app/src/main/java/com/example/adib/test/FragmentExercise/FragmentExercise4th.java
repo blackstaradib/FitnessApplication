@@ -1,5 +1,6 @@
 package com.example.adib.test.FragmentExercise;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,15 +11,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.adib.test.R;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerFragment;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 /**
  * Created by ADIB on 12/08/2018.
  */
 
-public class FragmentExercise4th extends Fragment {
+public class FragmentExercise4th extends Fragment implements YouTubePlayer.OnInitializedListener {
 
 
     private View view=null;
@@ -30,6 +36,10 @@ public class FragmentExercise4th extends Fragment {
     Fragment fragment5th;
     FragmentTransaction transaction;
     AppCompatActivity activity;
+
+    YouTubePlayerFragment youTubePlayerFragment;
+
+    AnimationDrawable animationDrawable;
 
     @Nullable
     @Override
@@ -57,7 +67,35 @@ public class FragmentExercise4th extends Fragment {
             }
         });
 
+        youTubePlayerFragment= (YouTubePlayerFragment) getActivity().getFragmentManager().findFragmentById(R.id.youTubeFragment);
+        youTubePlayerFragment.initialize("AIzaSyBMz9atrH6nHsakXfARLKPsKvAkKE5iA3w",this);
+
+        ImageView imageView = view.findViewById(R.id.imageViewAnimation);
+        animationDrawable = (AnimationDrawable)imageView.getDrawable();
+        imageView.post(new Runnable() {
+            @Override
+            public void run() {
+                animationDrawable.start();
+            }
+        });
+
         return view;
 
     }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
+        if (!b) {
+            youTubePlayer.cueVideo("srH-2pQdKhg");
+        }
+
+    }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+    }
+
+
 }

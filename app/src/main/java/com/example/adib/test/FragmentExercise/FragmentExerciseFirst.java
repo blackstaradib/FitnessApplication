@@ -38,7 +38,7 @@ public class FragmentExerciseFirst extends Fragment {
 
     LinkedList<TypeExercise> typeExerciseList = null;
 
-    LinearLayout button =null;
+    LinearLayout buttonSelectDay =null;
 
     Dialog dialog;
 
@@ -70,8 +70,8 @@ public class FragmentExerciseFirst extends Fragment {
         recyclerView.setAdapter(adapterCardListExerciseFirst);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        button=view.findViewById(R.id.button_calender_select_day);
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonSelectDay=view.findViewById(R.id.button_calender_select_day);
+        buttonSelectDay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -94,6 +94,8 @@ public class FragmentExerciseFirst extends Fragment {
 
             }
         });
+
+
 
         return view;
 

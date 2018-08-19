@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,13 +10,19 @@
     android:layoutDirection="rtl"
     android:textDirection="rtl">
 
+    <fragment
+        android:id="@+id/youTubeFragment"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:layout_width="350dp"
+        android:layout_height="250dp">
+    </fragment>
 
     <Button
         android:id="@+id/button_exercise_current"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/gradient_buttons"
         android:ems="10"
         android:layoutDirection="rtl"
@@ -24,5 +32,23 @@
         android:paddingTop="10dp"
         android:text="البدء"
         android:textColor="#fff"
-        android:textDirection="rtl" />
+        android:textDirection="rtl"
+        app:layout_constraintTop_toBottomOf="@+id/youTubeFragment"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/imageViewAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:src="@drawable/animation_images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_exercise_current" />
 </android.support.constraint.ConstraintLayout>
