@@ -14,10 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.adib.test.AdapterCardListExerciseSecond;
-import com.example.adib.test.BackEnd.Exercise;
+import com.example.adib.test.Module.Exercise;
 import com.example.adib.test.R;
 
 import java.util.LinkedList;
@@ -38,7 +37,6 @@ public class FragmentExerciseSecond extends Fragment {
 
     Fragment fragmentThird;
     FragmentTransaction transaction;
-    AppCompatActivity activity;
 
     Bundle bundle;
 
@@ -77,15 +75,13 @@ public class FragmentExerciseSecond extends Fragment {
         buttonExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity = (AppCompatActivity) view.getContext();
-
                 bundle=new Bundle();
                 bundle.putInt("count_exercise",ExerciseList.size());
 
                 fragmentThird = new FragmentExerciseThird();
                 fragmentThird.setArguments(bundle);
 
-                transaction=activity.getSupportFragmentManager().beginTransaction();
+                transaction = ((AppCompatActivity) view.getContext()).getSupportFragmentManager().beginTransaction();
                 transaction.add(R.id.frameExercise , fragmentThird);
                 transaction.addToBackStack("third");
                 transaction.commit();

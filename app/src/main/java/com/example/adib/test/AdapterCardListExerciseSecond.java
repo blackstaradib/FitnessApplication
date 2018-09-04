@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.adib.test.BackEnd.Exercise;
+import com.example.adib.test.Module.Exercise;
 
 import java.util.LinkedList;
 

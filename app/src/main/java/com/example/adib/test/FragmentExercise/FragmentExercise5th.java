@@ -1,5 +1,6 @@
 package com.example.adib.test.FragmentExercise;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.adib.test.R;
 
@@ -19,6 +20,7 @@ import com.example.adib.test.R;
  * Created by ADIB on 12/08/2018.
  */
 
+@SuppressLint("ValidFragment")
 public class FragmentExercise5th extends Fragment {
 
 
@@ -32,8 +34,8 @@ public class FragmentExercise5th extends Fragment {
 
     Fragment fragment4thor6th;
     FragmentTransaction transaction;
-    AppCompatActivity activity;
 
+    TextView textView;
 
     @Nullable
     @Override
@@ -46,36 +48,41 @@ public class FragmentExercise5th extends Fragment {
         countExercise--;
 
         button=view.findViewById(R.id.button_exercise_next);
+        textView = view.findViewById(R.id.textView_exercise_next);
         if (countExercise!=0) {
             button.setText("استمرار");
+            textView.setText("التمرين التالي");
         }
         else {
             button.setText("انهاء");
+            textView.setText("تم إنهاء التمارين");
         }
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (countExercise!=0) {
-                    activity = (AppCompatActivity) view.getContext();
-
                     bundle=new Bundle();
                     bundle.putInt("count_exercise",countExercise);
                     fragment4thor6th = new FragmentExercise4th();
                     fragment4thor6th.setArguments(bundle);
 
-                    transaction=activity.getSupportFragmentManager().beginTransaction();
-                    transaction.add(R.id.frameExercise , fragment4thor6th);
-                    transaction.addToBackStack("4th");
+                    transaction = ((AppCompatActivity) view.getContext()).getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.frameExercise, fragment4thor6th);
                     transaction.commit();
+
                 }
                 else {
-                    activity = (AppCompatActivity) view.getContext();
-
-                    activity.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-                    FragmentManager fragmentManager=activity.getSupportFragmentManager();
+                    ((AppCompatActivity) view.getContext()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+                    FragmentManager fragmentManager = ((AppCompatActivity) view.getContext()).getSupportFragmentManager();
                     String name = fragmentManager.getBackStackEntryAt(0).getName();
                     fragmentManager.popBackStackImmediate(name,FragmentManager.POP_BACK_STACK_INCLUSIVE);
+
+                    fragment4thor6th = new FragmentExercise6th();
+
+                    transaction = ((AppCompatActivity) view.getContext()).getSupportFragmentManager().beginTransaction();
+                    transaction.replace(R.id.frameExercise, fragment4thor6th);
+                    transaction.commit();
 
                 }
 

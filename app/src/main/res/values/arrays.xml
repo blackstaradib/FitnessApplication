@@ -6,18 +6,17 @@
         <item>تسجيل الدخول</item>
     </string-array>
 
-    <array name="indicator_colors">
-        <item>@color/indicator_1</item>
-        <item>@color/indicator_2</item>
-        <item>@color/indicator_3</item>
-        <item>@color/indicator_4</item>
-    </array>
+    <string-array name="spinnerActivity">
+        <item>الجلوس والقليل من المشي</item>
+        <item>رياضة خفيفة اسبوعيا</item>
+        <item>رياضة معتدلة اسبوعيا</item>
+        <item>رياضة ذات قوة عالية اسبوعيا</item>
+    </string-array>
 
-    <array name="toppings">
-        <item>AAA</item>
-        <item>BBB</item>
-        <item>CCC</item>
-    </array>
+    <string-array name="spinner_gender">
+        <item>ذكر</item>
+        <item>انثى</item>
+    </string-array>
 
 </resources>
 

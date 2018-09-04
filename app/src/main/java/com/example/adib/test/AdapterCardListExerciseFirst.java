@@ -11,11 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.adib.test.BackEnd.TypeExercise;
-import com.example.adib.test.FragmentExercise.FragmentExerciseFirst;
 import com.example.adib.test.FragmentExercise.FragmentExerciseSecond;
+import com.example.adib.test.Module.TypeExercise;
 
 import java.util.LinkedList;
 

@@ -19,6 +19,7 @@ android {
     sourceSets {
         main {
             java.srcDirs = ['src/main/java']
+            assets.srcDirs = ['src/main/assets', 'src/main/res/assets/', 'src/main/res/drawable/action_images']
         }
     }
 }

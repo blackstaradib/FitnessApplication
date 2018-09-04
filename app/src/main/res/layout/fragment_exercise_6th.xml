@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.adib.test.FragmentExercise.FragmentExerciseFirst"
+    android:background="@drawable/gradient"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl"
+            android:orientation="vertical"
+            android:textDirection="rtl">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_weight_input"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="132dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="ادخل الوزن"
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/editText_weight_input"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="132dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textAutoComplete|number"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintEnd_toStartOf="@+id/textView_weight_input"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="136dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="كيلوغرام"
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView_BMI"
+                    android:layout_width="97dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="60dp"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="BMI = "
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintBottom_toTopOf="@+id/button_new_weight_save"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <TextView
+                    android:id="@+id/textView_BMI_Equal"
+                    android:layout_width="122dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="56dp"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:text="25"
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintBottom_toTopOf="@+id/button_new_weight_unsave"
+                    app:layout_constraintStart_toEndOf="@+id/textView_BMI"
+                    app:layout_constraintTop_toBottomOf="@+id/editText_weight_input"
+                    app:layout_constraintVertical_bias="0.024"
+                    tools:ignore="MissingConstraints" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_new_weight_unsave"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="156dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_buttons"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="عدم الحفظ"
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/button_new_weight_save"
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="156dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gradient_buttons"
+                    android:ems="10"
+                    android:layoutDirection="rtl"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:text="حفظ"
+                    android:textColor="#fff"
+                    android:textDirection="rtl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

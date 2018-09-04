@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.adib.test.R;
 
@@ -28,8 +27,6 @@ public class FragmentExerciseThird extends Fragment {
 
     Fragment fragment4th;
     FragmentTransaction transaction;
-    AppCompatActivity activity;
-
 
     @Nullable
     @Override
@@ -45,12 +42,10 @@ public class FragmentExerciseThird extends Fragment {
             @Override
             public void onClick(View view) {
 
-                activity = (AppCompatActivity) view.getContext();
-
                 fragment4th = new FragmentExercise4th();
                 fragment4th.setArguments(bundle);
 
-                transaction=activity.getSupportFragmentManager().beginTransaction();
+                transaction = ((AppCompatActivity) view.getContext()).getSupportFragmentManager().beginTransaction();
                 transaction.add(R.id.frameExercise , fragment4th);
                 transaction.addToBackStack("4th");
                 transaction.commit();

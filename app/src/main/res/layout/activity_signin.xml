@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="rtl"
@@ -52,7 +51,6 @@
                 android:layout_marginRight="45dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edittext"
-                android:drawableStart="@drawable/ic_username"
                 android:ems="10"
                 android:hint="الطول"
                 android:inputType="textAutoComplete|number"
@@ -75,7 +73,6 @@
                 android:layout_marginRight="45dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edittext"
-                android:drawableStart="@drawable/ic_username"
                 android:ems="10"
                 android:hint="العمر"
                 android:inputType="textAutoComplete|number"
@@ -99,7 +96,6 @@
                 android:layout_marginRight="45dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edittext"
-                android:drawableStart="@drawable/ic_username"
                 android:ems="10"
                 android:hint="الوزن"
                 android:inputType="textAutoComplete|number"
@@ -115,28 +111,49 @@
                 android:textDirection="rtl" />
 
 
-            <EditText
-                android:id="@+id/editText5"
+            <Spinner
+                android:id="@+id/spinner_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="45dp"
                 android:layout_marginRight="45dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/edittext"
-                android:drawableStart="@drawable/ic_username"
+                android:entries="@array/spinner_gender"
+                style="@style/spinnerItemStyle"
                 android:ems="10"
-                android:hint="الجنس"
-                android:inputType="text|textAutoComplete"
                 android:layoutDirection="rtl"
                 android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:paddingTop="10dp"
                 android:singleLine="true"
-                android:text=""
                 android:textColor="#fff"
                 android:textColorHint="#355C7D"
                 android:textDirection="rtl" />
+
+
+            <Spinner
+                android:id="@+id/spinner_activity_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edittext"
+                android:entries="@array/spinnerActivity"
+                style="@style/spinnerItemStyle"
+                android:ems="10"
+                android:layoutDirection="rtl"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textColorHint="#355C7D"
+                android:textDirection="rtl" />
+
 
             <EditText
                 android:id="@+id/editText6"
@@ -204,15 +221,6 @@
                 android:textColor="#fff"
                 android:textDirection="rtl" />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/sign_in_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="clicksignin"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="10dp" />
         </LinearLayout>
     </ScrollView>
 
